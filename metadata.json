@@ -1,0 +1,6 @@
+{
+  "name": "Dudh Sagar",
+  "description": "Pure Traditions, Delivered Fresh Daily. Complete heritage dairy delivery, subscriptions, and ledger tracking application.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #001938;
+    --primary-container: #002e5d;
+    --on-primary: #ffffff;
+    --on-primary-container: #7697cc;
+    
+    --secondary: #7d5700;
+    --secondary-container: #feb71a;
+    --on-secondary: #ffffff;
+    --on-secondary-container: #6b4b00;
+    
+    --secondary-fixed: #ffdeaa;
+    --secondary-fixed-dim: #ffba2c;
+    --on-secondary-fixed: #271900;
+    --on-secondary-fixed-variant: #5f4100;
+    
+    --tertiary: #2b1300;
+    --tertiary-container: #492500;
+    --tertiary-fixed: #ffdcc2;
+    --on-tertiary: #ffffff;
+    --on-tertiary-container: #dd7e15;
+    --on-tertiary-fixed-variant: #6d3a00;
+    
+    --background: #fffdf5;
+    --on-background: #1a1c1f;
+    --surface: #faf9fd;
+    --surface-container-low: #f4f3f8;
+    --surface-container-lowest: #ffffff;
+    --surface-container-high: #e8e8ec;
+    --surface-variant: #e3e2e7;
+    --outline: #737780;
+    --outline-variant: #c3c6d0;
+    
+    --error: #ba1a1a;
+    --error-container: #ffdad6;
+    --on-error: #ffffff;
+    --on-error-container: #93000a;
+  }
+
+  .dark {
+    --background: #0d131f;
+    --on-background: #f1f0f5;
+    --surface: #141b27;
+    --surface-container-low: #1a2332;
+    --surface-container-lowest: #0d131f;
+    --surface-container-high: #242f42;
+    --surface-variant: #2d3a50;
+    --on-surface: #e8e8ec;
+    --on-surface-variant: #a5acba;
+    --outline: #5c6475;
+    --outline-variant: #3a4556;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--background);
+    color: var(--on-background);
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+/* Cultural Marigold & Pail elements */
+.marigold-divider {
+  background-image: radial-gradient(#feb71a 2px, transparent 2px);
+  background-size: 12px 12px;
+  height: 8px;
+  width: 100%;
+}
+
+.marigold-divider-fine {
+  background-image: radial-gradient(#feb71a 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  height: 6px;
+  width: 100%;
+}
+
+.clay-pot-bg {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 100 100"><path d="M50 20c-15 0-25 10-25 25 0 15 10 35 25 35s25-20 25-35c0-15-10-25-25-25zm0 5c10 0 20 8 20 20 0 12-8 30-20 30s-20-18-20-30c0-12 10-20 20-20z" fill="%23002E5D" fill-opacity="0.025"/></svg>');
+  background-repeat: repeat;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-card {
+  background: rgba(20, 27, 39, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Custom scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
